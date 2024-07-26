@@ -81,6 +81,8 @@ export const ResultBox = styled.div`
   align-items: center;
   border-radius: 8px;
   background-color: #f1f1f1;
+  font-size: 48px;
+  font-weight: 600;
 `
 export const ResultContainerCollatz = styled.div`
   width: 100%;
