@@ -38,8 +38,8 @@ export const useUserStore = create<UserStore>(
         })),
     }),
     {
-      name: 'user-store', // Key in localStorage
-      getStorage: () => localStorage, // Use localStorage
+      name: 'user-store',
+      getStorage: () => localStorage,
     }
   )
 )

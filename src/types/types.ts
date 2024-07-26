@@ -13,9 +13,3 @@ export interface PaginationRowsProps {
   totalPages: number
   handleNextPage: () => void
 }
-
-export interface UserRowProps {
-  user: User
-  index: number
-  onEdit: (userId: number) => void
-}

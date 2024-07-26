@@ -29,7 +29,9 @@ const Fibonacci = () => {
       setFinalInputValue(inputValue)
     }
   }
-
+  const renderResultBox = (value: number | null | string) => (
+    <ResultBox>{value !== null ? value : <StyledNumber />}</ResultBox>
+  )
   return (
     <>
       <Title>Fibonacci</Title>
@@ -48,11 +50,9 @@ const Fibonacci = () => {
         <HeaderTitle>Result</HeaderTitle>
 
         <ResultContainer>
-          <ResultBox>{prevFib !== null ? prevFib : <StyledNumber />}</ResultBox>
-          <ResultBox>
-            {finalInputValue !== null ? finalInputValue : <StyledNumber />}
-          </ResultBox>
-          <ResultBox>{nextFib !== null ? nextFib : <StyledNumber />}</ResultBox>
+          {renderResultBox(prevFib)}
+          {renderResultBox(finalInputValue)}
+          {renderResultBox(nextFib)}
         </ResultContainer>
         <NumberText>Your Number</NumberText>
       </Container>
